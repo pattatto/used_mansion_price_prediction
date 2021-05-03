@@ -1,1 +1,1 @@
-# used_mansion_price_prediction
+# 中古マンション住宅予測
