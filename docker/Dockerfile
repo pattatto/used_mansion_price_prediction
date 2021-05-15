@@ -9,5 +9,8 @@ RUN wget https://repo.continuum.io/archive/Anaconda3-2020.11-Linux-x86_64.sh && 
         rm -f Anaconda3-2020.11-Linux-x86_64.sh
 ENV PATH /opt/Anaconda3/bin:$PATH
 RUN pip install --upgrade pip
+RUN pip install \
+        pandas-profiling \
+        pycaret
 WORKDIR /
-CMD ["/bin/bash"]
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--LabApp.token=''"]
